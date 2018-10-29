@@ -1,0 +1,808 @@
+body{
+    background-color: #f7f7f7;
+
+}
+
+.navbar-default {
+    background-color: #383535;
+    border-color: #e7e7e7;
+}
+.navbar-default .navbar-brand {
+    color: rgb(255, 255, 255);
+}
+.navbar-default .navbar-brand:hover {
+    color: rgb(255, 255, 255);
+
+    cursor: pointer;
+}
+.navbar-default .navbar-nav>li>a {
+    color: rgb(255, 255, 255);
+}
+.location{
+    text-align: center
+}
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 10px;
+    border: 1px solid transparent;
+    height: 10px;
+}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: white;
+    background-color: rgba(0, 81, 255, 0.534);
+}
+.jumbotron{
+  background-image: linear-gradient(to bottom right, rgba(0, 153, 255, 0.431), rgba(202, 50, 39, 0.294)), url('https://www.essentialliving.co.uk/wp-content/uploads/2015/09/vantage-point-studio-2.jpg');
+   background-size: 100% 100%;
+
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+}
+.header{
+    background-image: url('https://images.unsplash.com/photo-1522885147691-06d859633fb8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d275fffc3bc4cfe44061a40647cb01d4&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    width: 100%; height: 100%;
+    position: absolute; 
+    top: 0; left: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+}
+.heading-primary{
+    background-color: rgba(255, 0, 119, 0.246);
+    color: #fff;
+    text-transform: uppercase;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+}
+.header__text-box {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.btn:hover {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+    -webkit-box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
+    color: rgb(255, 255, 255);
+
+}
+.heading-primary--main {
+    display: none;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    -webkit-animation-name: moveInLeft;
+    animation-name: moveInLeft;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+}
+@media screen and (max-width: 800px)
+ {
+   .heading-primary--sub{
+       font-size: 20px;
+   }
+ }
+.btn, .btn:link, .btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    position: relative;
+    font-size: 1.6rem;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btn--animated {
+    -webkit-animation: moveInBottom .5s ease-out .75s;
+    animation: moveInBottom .5s ease-out .75s;
+    -webkit-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+}
+.btn-btn-success{
+    padding: 0.5rem 40px;
+    font-size: 16px;
+}
+.btn--white {
+    background-color: rgba(255, 255, 255, 0.342);
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+}
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+.btn:hover::after {
+    -webkit-transform: scaleX(1.4) scaleY(1.6);
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0.6;
+}
+.heading-primary--sub {
+    padding: 15px;
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.5rem;
+    -webkit-animation: moveInRight 1s ease-out;
+    animation: moveInRight 1s ease-out;
+}
+.homes {
+    grid-column: center-start / center-end;
+    margin: 15rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 8.2rem;
+}
+@media screen and (max-width: 640px)
+ {
+  .homes{  
+    display: grid;
+    grid-template-columns: 400px;
+    margin: auto;
+    justify-content: center;
+ 
+}
+.home{
+    justify-items: center;
+
+}
+.facility{
+    justify-content: center;
+}
+
+}
+
+.home {
+    background-color: #eeeae7;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 3.5rem;
+    color: black;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.287);
+    border-radius: 3px;
+
+}
+.home-img {
+    display: grid;
+    height: 250px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 3.5rem;
+    
+    width: 100%;
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+    z-index: 1;
+}
+.home-name {
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 3.5rem;
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+    justify-self: center;
+    align-self: end;
+    z-index: 3;
+    width: 80%;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2.0rem;
+    text-align: center;
+    padding: 1.25rem;
+    background-color: #4077b67c;
+    color: #fff;
+    font-weight: 500;
+    transform: translateY(50%);
+}
+.home-location, .home-rooms, .home-area, .home-price {
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 3.5rem;
+
+    font-size: 1.8rem;
+    margin-left: 2.8rem;
+
+}
+.home-location, .home-rooms {
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 3.5rem;
+    margin-top: 2.5rem;
+}
+.home-btn{
+    grid-column: 1 / -1;
+    background-color: #3a7cd3;
+    color: #fff;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2.0rem;
+    padding: 1.5rem 3rem;
+    cursor: pointer;
+    text-align: center;
+
+   
+}
+.home-btn:hover{
+    background-color: rgb(30, 53, 129);
+    
+    -webkit-box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
+    color: rgb(255, 255, 255);
+    text-decoration: none
+
+}
+.modify{
+    display:flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+
+}
+.btn-edit{
+    background-color: #ff073d;
+    color: rgb(255, 255, 255);
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2.0rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 4px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+}
+.btn-apply{
+    background-color: #ff7f07;
+    color: rgb(255, 255, 255);
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2.0rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 4px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.btn-apply:hover{
+    text-decoration: none;
+    color: white
+}
+.btn-edit:hover{
+    background-color: #00ecd9ed;
+    text-decoration: none;
+    color: white
+}
+.btn-delete{
+    background-color: #da1010;
+    color: #fff;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2.0rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 4px;
+    margin-right: 10px;
+
+}
+.btb-apply:hover{
+    background-color: #09ddecb0;
+    text-decoration: none
+}
+.btn-delete:hover{
+    background-color: #ff0101f6
+}
+.desc{
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.btn-delete-comment{
+
+    color: rgb(255, 255, 255);
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2.0rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    text-align: center;
+    background-color: #da1010;
+    border-radius: 4px 
+
+}
+.modify-comment{
+    display:flex;
+    align-content: flex-end;
+    margin-bottom: 10px;
+
+}
+.btn-edit-comment{
+    color: rgb(255, 255, 255);
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 18px;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    text-align: center;
+    background-color: #66c012;
+    margin-right: 10px;
+    border-radius: 4px 
+
+
+}
+.send{
+    background-color: #da1010;
+    color: #fff;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2.0rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 4px;
+    margin-right: 10px;
+    width: 95%;
+    font-weight: 900;
+}
+.container-contact{
+    background-image: url('https://fleetdiscounttravels.com/wp-content/uploads/2016/06/background.png');
+    background-size: cover;
+    
+    position: absolute;
+    width: 100%; height: 100%;
+    top: 0; left: 0;
+    z-index: -1;
+}
+.row{
+    margin-top: 10%;
+}
+.form-contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+.form-group {
+    margin-bottom: 15px;
+    width: 500px;
+    display: flex;
+    flex-flow:row wrap;
+
+
+}
+.create-new{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media screen and (max-width: 620px)
+ {
+  .form-group{  
+    width: 350px
+}
+ }
+ .container-radio {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin: 10px;
+}
+.container-radio input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 17px;
+    width: 17px;
+    background-color: rgb(107, 103, 103);
+    
+}
+
+.container-radio:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.container-radio input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container-radio input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.container-radio .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.form-control {
+    width: 100%;
+    margin: auto;
+    margin-right: 20px;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 16px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.custom-control-input{
+    width: 2rem;
+    margin: auto;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+}
+input[type=radio] {
+    margin: 8px 14px 0;
+    margin-top: 1px\9;
+    line-height: normal;
+}
+.facility{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 30px; 
+}
+@media screen and (max-width: 452px)
+ {
+    .facility{
+        margin-left: 30px;
+        flex-direction: column;
+        justify-content: flex-start
+
+    }
+
+ }
+.bedroom{
+    font-size: 20px;
+    font-family: 'Krub', sans-serif;
+
+}
+.list-item{
+    flex: 0 0 50%;
+    margin-bottom: .7rem;
+}
+.list-item::before{
+    content: "";
+        display: inline-block;
+        height: 1rem;
+        width: 1rem;
+        margin-right: .7rem;
+        background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4a/Greater_than_symbol.jpg');
+        background-size: cover;
+}
+.well{
+    background-color: #fff
+}
+.login-container{
+    width: 100%;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    
+    justify-content: center;
+    position: absolute; 
+    top: 0; left: 0;
+    
+
+}
+.wrap-login{
+    width: 960px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.329);
+    background-color: rgba(206, 212, 218, 0.301)
+
+   
+}
+.left-container{
+    background-color: #09ddec;
+    width:400px;
+    height: 700px;
+    background-image: url('https://lonelyplanetwp.imgix.net/2015/04/elnido-698fa718c90a.jpg?fit=min&q=40&sharp=10&vib=20&w=1470');
+    flex-grow: 1;
+    background-size: cover
+
+}
+.abc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 8;
+    
+
+
+}
+.input100:focus + .focus-input100 {
+    -webkit-animation: anim-shadow 0.5s ease-in-out forwards;
+    animation: anim-shadow 0.5s ease-in-out forwards;
+}
+.focus-input100 {
+    display: block;
+    position: absolute;
+    border-radius: 25px;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 0px 0px 0px;
+    color: rgba(87,184,70, 0.8);
+}
+.input100:focus + .focus-input100 + .symbol-input100 {
+    color: #57b846;
+    padding-left: 28px;
+}
+.input100::after{
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: -1;
+    transition:  all 0.4s;
+    background-color: #09ddec;
+
+}
+.login100-form-btn::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    bottom: -50%;
+    left: -50%;
+    background: linear-gradient(to bottom, rgba(229, 172, 142, 0), rgba(255,255,255,0.5) 50%, rgba(229, 172, 142, 0));
+    transform: rotateZ(60deg) translate(-5em, 7.5em);
+}
+ .login100-form-btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+} 
+.login100-form-btn:hover::after, .login100-form-btn:focus::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+  }
+
+
+
+.input100:focus::after{
+    transform: scale(1.5);
+    opacity:1;
+    box-sizing: inherit;
+
+}
+.symbol-input100 {
+    font-size: 15px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    border-radius: 25px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-left: 35px;
+    pointer-events: none;
+    color: #666666;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.wrap-input100 {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    margin-bottom: 10px;
+    display: flex;
+
+}
+.login-title{
+    font-size: 48px;
+    color: black;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+    width: 100%;
+    display: block;
+    padding-bottom: 54px;
+}
+.input100{
+    font-family: Poppins-Medium;
+    font-size: 15px;
+    line-height: 1.5;
+    color: white;
+    display: block;
+    width: 100%;
+    background: #e6e6e6;
+    height: 50px;
+    border-radius: 25px;
+    padding: 0 30px 0 68px;
+    position: relative;
+}
+.container-login100-form-btn{
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.login100-form-btn{
+    font-size: 15px;
+    color: #fff;
+    text-transform: uppercase;
+    width: 100%;
+    height: 50px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    overflow: hidden;
+
+    color: #fff;
+    background-color: #b10b02;
+    border-color: #b10b02;
+  border-radius: 0.5em;
+  padding: 0 1em;
+  position: relative;
+  line-height: 32px;
+  margin-bottom: 20px
+
+}
+
+
+@media screen and (max-width: 760px) {
+    .left-container {
+            display: none
+        }
+     .login-container{
+           background-image: url('https://www.st-christophers.co.uk/__data/assets/image/0005/490019/lead.jpg'); 
+           background-size: cover;      
+           z-index: -1;
+           display: flex;  
+        } 
+    .container{
+        padding-right: 0px;
+    }    
+    .abc{
+        width: 500px;
+  
+    }
+    .wrap-login{
+      width: auto;
+      background-color: rgba(250, 250, 250, 0.8)
+    }
+
+    .login100-form-btn{
+        margin-bottom: 20px
+    }
+    .login-title{
+        color: #484848;
+
+
+    }
+   
+    
+}
+
+
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background-color: rgb(253, 253, 251) ;
+    background-image: none !important;
+    color: rgb(0, 0, 0) !important;
+}
+textarea:focus, input:focus {
+    border-color: transparent !important;
+}
+input:focus, textarea:focus, select:focus {
+    outline-offset: -2px;
+}
+
+
+.mySlides {
+    display:block;
+    margin-bottom: 44px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.col-md-12{
+    padding-left: 0px;
+}
+.w3-content{
+    display:flex;
+    flex-direction: column;
+    width: 100%
+}

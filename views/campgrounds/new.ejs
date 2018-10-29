@@ -1,0 +1,164 @@
+<% include ../partials/header %>
+<div class="container">
+    <div class="row">
+        <h1 style="text-align: center">Create a New House</h1>
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/campgrounds" method="POST" class='create-new'>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="name" placeholder="address">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="image1" placeholder="image url 1">
+                </div>
+                <div class="form-group">
+                        <input class="form-control" type="text" name="image2" placeholder="image url 2">
+                </div>
+                
+                <div class="form-group">
+                        <input class="form-control" type="text" name="location" placeholder="city">
+                </div>
+                <div class="form-group">
+                        <input class="form-control" type="number" name="room" placeholder="number of rooms...">
+                </div>
+                <div class="form-group">
+                        <input class="form-control" type="number" name="area" placeholder="area...">
+                </div>
+                <div class="form-group">
+                        <input class="form-control" type="number" name="price" placeholder="price...">
+                </div>
+                <div class="form-group">
+                        <input class="form-control" type="number" name="bedroom" placeholder="number of bedrooms...">
+                </div>
+                <div class="form-group">
+                        <h4>Bedroom is finished?</h4>
+                        <label class='container-radio'> Yes<input class="custom-control-input" type="radio" name="bedroomFurnished" value='Yes'>
+                            <span class="checkmark"></span>
+                        </label>
+                         <label class='container-radio'> No<input class="custom-control-input" type="radio" name="bedroomFurnished" value='No'>
+                            <span class="checkmark"></span>
+                        </label> 
+
+
+                                            
+                </div>
+                <div class="form-group">
+                        <h4>Bathroom: </h4>
+                        <label class='container-radio'> Shared<input class="custom-control-input" type="radio" name="bathroom" value='Shared'>
+                            <span class="checkmark"></span>
+                        </label> 
+                        <label class='container-radio'> Private<input class="custom-control-input" type="radio" name="bathroom" value='Private'>
+                            <span class="checkmark"></span>
+                        </label>                     
+                </div> <div class="form-group">
+                        <h4>Toilet: </h4>
+                        <label class='container-radio'> Shared<input class="custom-control-input" type="radio" name="toilet" value='Shared'>
+                            <span class="checkmark"></span>
+                        </label> 
+                        <label class='container-radio'> Private<input class="custom-control-input" type="radio" name="toilet" value='Private'>
+                            <span class="checkmark"></span>
+                        </label>                   
+                </div>
+                <div class="form-group">
+                        <h4>Kitchen: </h4>
+                        <label class='container-radio'> Shared<input class="custom-control-input" type="radio" name="kitchen" value='Shared'>
+                            <span class="checkmark"></span>
+                        </label> 
+                        <label class='container-radio'> Private<input class="custom-control-input" type="radio" name="kitchen" value='Private'>
+                            <span class="checkmark"></span>
+                        </label> 
+
+
+
+                                    
+                </div>
+                <div class="form-group">
+                        <h4>Water: </h4>
+                        <label class='container-radio'> Included<input class="custom-control-input" type="radio" name="water" value='Included'>
+                            <span class="checkmark"></span>
+                        </label> 
+                        <label class='container-radio'> Exclusive<input class="custom-control-input" type="radio" name="water" value='Exclusive'>
+                            <span class="checkmark"></span>
+                        </label> 
+                        
+
+
+                                         
+                </div> <div class="form-group">
+                        <h4>Electricity: </h4>
+                        <label class='container-radio'> Included<input class="custom-control-input" type="radio" name="electricity" value='Included'>
+                            <span class="checkmark"></span>
+                        </label> 
+                        <label class='container-radio'> Exclusive<input class="custom-control-input" type="radio" name="electricity" value='Exclusive'>
+                            <span class="checkmark"></span>
+                        </label> 
+
+                                            
+                </div> 
+                
+                <div class="form-group">
+                        <h4>Internet: </h4>
+                        <label class='container-radio'> Included<input class="custom-control-input" type="radio" name="internet" value='Included'>
+                            <span class="checkmark"></span>
+                        </label> 
+                        <label class='container-radio'> Exclusive<input class="custom-control-input" type="radio" name="internet" value='Exclusive'>
+                            <span class="checkmark"></span>
+                        </label> 
+                                          
+                </div>
+                <div class="form-group">
+                        <h4>Bed is finished?</h4>
+                        <label class='container-radio'> Yes<input class="custom-control-input" type="radio" name="bed" value='Yes'>
+                            <span class="checkmark"></span>
+                        </label> 
+                        <label class='container-radio'> No
+                        <input class="custom-control-input" type="radio" name="bed" value='No'>  
+                        <span class="checkmark"></span>                     
+                </div>
+                <div class="form-group">
+                        <h4>Desk is finished?</h4>
+                        <label class='container-radio'> Yes<input class="custom-control-input" type="radio" name="desk" value='Yes'>
+                            <span class="checkmark"></span>
+                        </label> 
+                        <label class='container-radio'> No<input class="custom-control-input" type="radio" name="desk" value='No'>
+                            <span class="checkmark"></span>
+                        </label> 
+                </div><div class="form-group">
+                        <h4>Wifi is finished?</h4>
+                        <label class='container-radio'> Yes<input class="custom-control-input" type="radio" name="wifi" value='Yes'>
+                            <span class="checkmark"></span>
+                        </label>
+                         <label class='container-radio'> No<input class="custom-control-input" type="radio" name="wifi" value='No'>
+                            <span class="checkmark"></span>
+                        </label>                                              
+                </div><div class="form-group">
+                        <h4>Heating is finished?</h4>
+                        <label class='container-radio'> Yes<input class="custom-control-input" type="radio" name="heating" value='Yes'>
+                            <span class="checkmark"></span>
+                        </label> 
+                        <label class='container-radio'> No<input class="custom-control-input" type="radio" name="heating" value='No'>
+                            <span class="checkmark"></span>
+                        </label>                     
+                </div>
+                <div class="form-group">
+                        <h4>Washing Machine:</h4>
+                        <label class='container-radio'> Yes<input class="custom-control-input" type="radio" name="washing" value='Yes'>
+                            <span class="checkmark"></span>
+                        </label> 
+                        <label class='container-radio'> No<input class="custom-control-input" type="radio" name="washing" value='No'>
+                            <span class="checkmark"></span>
+                        </label>                    
+                </div>
+
+                <div class="form-group">
+                        <textarea class="form-control" type="text" name="description" placeholder="description"></textarea>
+                    </div>
+                <div class="form-group">
+                    <button class="btn-apply">Submit!</button>
+                </div>
+            </form>
+            <a href="/campgrounds">Go Back</a>
+        </div>
+    </div>
+</div>
+<% include ../partials/footer %>
+

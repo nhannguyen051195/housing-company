@@ -1,0 +1,169 @@
+<% include ../partials/header %>
+
+
+
+
+
+<div class="container">
+        <div class="row">
+            <h1 style="text-align: center">Create a New Campground</h1>
+            <div style="width: 30%; margin: 25px auto;">
+                <form action="/campgrounds/<%= campground._id %>?_method=PUT" method="POST" class='create-new'>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="campground[name]" placeholder="name" value="<%= campground.name %>">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="campground[image1]" placeholder="image url 1" value="<%= campground.image1 %>">
+                    </div>
+                    <div class="form-group">
+                            <input class="form-control" type="text" name="campground[image2]" placeholder="image url 2" value="<%= campground.image2 %>">
+                    </div>
+                    
+                    <div class="form-group">
+                            <input class="form-control" type="text" name="campground[location]" placeholder="city" value="<%= campground.location %>">
+                    </div>
+                    <div class="form-group">
+                            <input class="form-control" type="number" name="campground[room]" placeholder="number of rooms..." value="<%= campground.room %>">
+                    </div>
+                    <div class="form-group">
+                            <input class="form-control" type="number" name="campground[area]" placeholder="area..." value="<%= campground.area %>">
+                    </div>
+                    <div class="form-group">
+                            <input class="form-control" type="number" name="campground[price]" placeholder="price..." value="<%= campground.price %>">
+                    </div>
+                    <div class="form-group">
+                            <input class="form-control" type="number" name="campground[bedroom]" placeholder="number of bedrooms..." value="<%= campground.bedroom %>">
+                    </div>
+                    <div class="form-group">
+                            <h4>Bedroom is finished?</h4>
+                            <label class='container-radio'> Yes<input class="custom-control-input" type="radio" name="campground[bedroomFurnished]" value='Yes'>
+                                <span class="checkmark"></span>
+                            </label>
+                             <label class='container-radio'> No<input class="custom-control-input" type="radio" name="campground[bedroomFurnished]" value='No'>
+                                <span class="checkmark"></span>
+                            </label> 
+    
+    
+                                                
+                    </div>
+                    <div class="form-group">
+                            <h4>Bathroom: </h4>
+                            <label class='container-radio'> Shared<input class="custom-control-input" type="radio" name="campground[bathroom]" value='Shared'>
+                                <span class="checkmark"></span>
+                            </label> 
+                            <label class='container-radio'> Private<input class="custom-control-input" type="radio" name="campground[bathroom]" value='Private'>
+                                <span class="checkmark"></span>
+                            </label>                     
+                    </div> <div class="form-group">
+                            <h4>Toilet: </h4>
+                            <label class='container-radio'> Shared<input class="custom-control-input" type="radio" name="campground[toilet]" value='Shared'>
+                                <span class="checkmark"></span>
+                            </label> 
+                            <label class='container-radio'> Private<input class="custom-control-input" type="radio" name="campground[toilet]" value='Private'>
+                                <span class="checkmark"></span>
+                            </label>                   
+                    </div>
+                    <div class="form-group">
+                            <h4>Kitchen: </h4>
+                            <label class='container-radio'> Shared<input class="custom-control-input" type="radio" name="campground[kitchen]" value='Shared'>
+                                <span class="checkmark"></span>
+                            </label> 
+                            <label class='container-radio'> Private<input class="custom-control-input" type="radio" name="campground[kitchen]" value='Private'>
+                                <span class="checkmark"></span>
+                            </label> 
+    
+    
+    
+                                        
+                    </div>
+                    <div class="form-group">
+                            <h4>Water: </h4>
+                            <label class='container-radio'> Included<input class="custom-control-input" type="radio" name="campground[water]" value='Included'>
+                                <span class="checkmark"></span>
+                            </label> 
+                            <label class='container-radio'> Exclusive<input class="custom-control-input" type="radio" name="campground[water]" value='Exclusive'>
+                                <span class="checkmark"></span>
+                            </label> 
+                            
+    
+    
+                                             
+                    </div> <div class="form-group">
+                            <h4>Electricity: </h4>
+                            <label class='container-radio'> Included<input class="custom-control-input" type="radio" name="campground[electricity]" value='Included'>
+                                <span class="checkmark"></span>
+                            </label> 
+                            <label class='container-radio'> Exclusive<input class="custom-control-input" type="radio" name="campground[electricity]" value='Exclusive'>
+                                <span class="checkmark"></span>
+                            </label> 
+    
+                                                
+                    </div> 
+                    
+                    <div class="form-group">
+                            <h4>Internet: </h4>
+                            <label class='container-radio'> Included<input class="custom-control-input" type="radio" name="campground[internet]" value='Included'>
+                                <span class="checkmark"></span>
+                            </label> 
+                            <label class='container-radio'> Exclusive<input class="custom-control-input" type="radio" name="campground[internet]" value='Exclusive'>
+                                <span class="checkmark"></span>
+                            </label> 
+                                              
+                    </div>
+                    <div class="form-group">
+                            <h4>Bed is finished?</h4>
+                            <label class='container-radio'> Yes<input class="custom-control-input" type="radio" name="campground[bed]" value='Yes'>
+                                <span class="checkmark"></span>
+                            </label> 
+                            <label class='container-radio'> No
+                            <input class="custom-control-input" type="radio" name="campground[bed]" value='No'>  
+                            <span class="checkmark"></span>                     
+                    </div>
+                    <div class="form-group">
+                            <h4>Desk is finished?</h4>
+                            <label class='container-radio'> Yes<input class="custom-control-input" type="radio" name="campground[desk]" value='Yes'>
+                                <span class="checkmark"></span>
+                            </label> 
+                            <label class='container-radio'> No<input class="custom-control-input" type="radio" name="campground[desk]" value='No'>
+                                <span class="checkmark"></span>
+                            </label> 
+                    </div><div class="form-group">
+                            <h4>Wifi is finished?</h4>
+                            <label class='container-radio'> Yes<input class="custom-control-input" type="radio" name="campground[wifi]" value='Yes'>
+                                <span class="checkmark"></span>
+                            </label>
+                             <label class='container-radio'> No<input class="custom-control-input" type="radio" name="campground[wifi]" value='No'>
+                                <span class="checkmark"></span>
+                            </label>                                              
+                    </div><div class="form-group">
+                            <h4>Heating is finished?</h4>
+                            <label class='container-radio'> Yes<input class="custom-control-input" type="radio" name="campground[heating]" value='Yes'>
+                                <span class="checkmark"></span>
+                            </label> 
+                            <label class='container-radio'> No<input class="custom-control-input" type="radio" name="campground[heating]" value='No'>
+                                <span class="checkmark"></span>
+                            </label>                     
+                    </div>
+                    <div class="form-group">
+                            <h4>Washing Machine:</h4>
+                            <label class='container-radio'> Yes<input class="custom-control-input" type="radio" name="campground[washing]" value='Yes'>
+                                <span class="checkmark"></span>
+                            </label> 
+                            <label class='container-radio'> No<input class="custom-control-input" type="radio" name="campground[washing]" value='No'>
+                                <span class="checkmark"></span>
+                            </label>                    
+                    </div>
+    
+                    <div class="form-group">
+                            <textarea class="form-control" type="text" name="campground[description]" placeholder="description" value="<%= campground.description %>"></textarea>
+                        </div>
+                    <div class="form-group">
+                        <button class="btn-apply">Submit!</button>
+                    </div>
+                </form>
+                <a href="/campgrounds">Go Back</a>
+            </div>
+        </div>
+    </div>
+<% include ../partials/footer %>
+

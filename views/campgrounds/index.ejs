@@ -1,0 +1,39 @@
+<% include ../partials/header %> 
+
+ <div class="container">
+     <header class="jumbotron">
+         <div class="container">
+             <h1 style="color:white">Welcome To our awesome world!</h1>
+             <p style="color:white" class='text'>View our hand-picked houses from all over the world</p>
+             <p>
+                <a class="btn btn-primary btn-medium" href="/campgrounds/new">Add New House</a>
+             </p>
+         </div>
+     </header>
+     
+     <section class='homes'>
+            <% campgrounds.forEach(function(campground){ %>
+                <div class="home">
+
+                       <img src="<%= campground.image1 %>" class='home-img'>
+                        <h5 class='home-name'><%= campground.name %></h5>
+                        <div class='home-location'>
+                            <p class='location'><%= campground.location %></p>
+                        </div>
+                        <div class='home-rooms'>
+                            <p><%= campground.room %> rooms</p>
+                        </div>
+                        <div class='home-area'>
+                                <p><%= campground.area %>m2</p>
+                        </div> <div class='home-price'>
+                                <p><%= campground.price %>e/months</p>
+                        </div>
+                       
+                           <a href="/campgrounds/<%= campground._id %>" class="home-btn">More Info</a>
+                </div>
+
+            <% }); %>
+     </section>
+</div>
+
+<% include ../partials/footer %>

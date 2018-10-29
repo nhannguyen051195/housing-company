@@ -1,0 +1,130 @@
+<% include ../partials/header %>
+<div class="container">
+    <div class="row">
+        
+        <div class="col-md-12">
+            <div class="thumbnail">
+
+<div class="w3-content" >
+    <div style='text-align: center'><h2>House details in <%=campground.name%></h2></div>
+  <div class="mySlides">
+      <img class="mySlides" src="<%= campground.image1 %>" style="width:100%">
+      <img class="mySlides" src="<%= campground.image2 %>" style="width:100%">
+  </div>
+</div>
+        
+                <div class="caption-full">
+
+                    <h3>Description:</h3>
+                    <p class='desc'><%= campground.description %></p>
+                    <div class="facility">
+                        <div class='bedroom'>
+                            <h2 style='font-weight: bold;'>Bedroom</h2>
+                            <p class='list-item'>Number of bedrooms: <%= campground.bedroom %> </p>
+                            
+                            <% if(campground.bedroomFurnished==='Yes'){ %>
+    
+                            <p class='list-item'>Bedroom furnished</p>  
+                            
+                            <% }%>
+                           
+                        
+                        </div>
+                        <div class='bedroom'>
+                                <h2 style='font-weight: bold;'>Area</h2>
+                                <p class='list-item'>Kitchen: <%= campground.kitchen %></p>
+                                <p class='list-item'>Bathroom: <%= campground.bathroom %></p>  
+                                <p class='list-item'>Toilet: <%= campground.toilet %></p>
+                        </div>
+                        <div class='bedroom'>
+                                <h2 style='font-weight: bold;'>Utilities</h2>
+
+                                <% if(campground.desk==='Yes'){ %>
+    
+                                <p class='list-item'>Desk</p>  
+                                    
+                                 <% }%>
+                                <% if(campground.wifi==='Yes'){ %>
+    
+                                 <p class='list-item'>Wifi</p>  
+                                        
+                                <% }%>
+                                <% if(campground.heating==='Yes'){ %>
+    
+                                <p class='list-item'>Heating</p>  
+                                            
+                                <% }%>
+                                <% if(campground.washing==='Yes'){ %>
+    
+                                 <p class='list-item'>Washing Machine</p>  
+                                                
+                                <% }%>
+                                <% if(campground.bed==='Yes'){ %>
+    
+                                <p class='list-item'>Bed</p>  
+                                                    
+                                <% }%>
+                        </div>
+                        <div class='bedroom'>
+                                <h2 style='font-weight: bold;'>Bills</h2>
+                                <p class='list-item'>Water: <%= campground.water %></p>
+                                <p class='list-item'>Electicity: <%= campground.electricity %></p>  
+                                <p class='list-item'>Internet: <%= campground.internet %></p>
+                        </div>
+                    </div>
+                    
+
+  
+                    <p>
+                        <em>Submitted By <%= campground.author.username %> on <%= campground.date %></em>
+                    </p>
+                    <% if(currentUser && campground.author.id.equals(currentUser._id)){ %>
+                        <div class="modify">
+                        
+                        <form id="delete-form" action="/campgrounds/<%= campground._id %>?_method=DELETE" method="POST">
+                            <button class="btn-delete"><span class="glyphicon glyphicon-trash"></span> Delete </button>
+                        </form>
+                        <a class="btn-edit" href="/campgrounds/<%= campground._id %>/edit"><i class="fas fa-edit"></i> Edit</a>
+
+
+                    <% }%>
+                    <a class="btn-apply" href="/campgrounds/<%= campground._id %>/contact">
+                        Apply now</a>
+                    </div>
+
+                </div>
+                
+            </div>
+            <div class="well">
+                <h3>Comments:</h3>
+                
+                <hr>
+                <% campground.comments.forEach(function(comment){ %>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4><%= comment.author.username %></h4>
+                            <p class='desc'>
+                                <%= comment.text %> 
+                            </p>
+                        <% if(currentUser && comment.author.id.equals(currentUser._id)){ %>
+                            <div class="modify">
+                            <a class="btn-edit-comment" 
+                               href="/campgrounds/<%=campground._id %>/comments/<%=comment._id %>/edit"> <i class="fas fa-edit"></i>
+                               Edit</a>
+                            <form id="delete-form" action="/campgrounds/<%=campground._id %>/comments/<%=comment._id %>?_method=DELETE" method="POST">
+                                 <button type="submit" class="btn-delete-comment" value="Delete"><span class="glyphicon glyphicon-trash"></span> Delete </button>
+                            </form>
+                            </div>
+                        <% } %>
+                        </div>
+                    </div>
+                <% }) %>
+                <div class="text-right">
+                        <a class="btn-btn-success" href="/campgrounds/<%= campground._id %>/comments/new">Add New Comment</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer %>
